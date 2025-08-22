@@ -1,0 +1,14 @@
+{
+  "employee_min": 10,
+  "employee_max": 200,
+  "rev_min": 1000000,
+  "rev_max": 50000000,
+  "w_employee_fit": 25,
+  "w_revenue_fit": 20,
+  "w_industry_match": 15,
+  "w_location_match": 10,
+  "w_contact_completeness": 20,
+  "w_growth_signal": 10,
+  "hot_threshold": 70,
+  "warm_threshold": 40
+}
