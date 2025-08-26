@@ -38,7 +38,7 @@ It enhances the reference lead generation tool by adding an **Intelligent Lead S
 - **Backend:** Python 3.10+, Flask  
 - **Frontend:** React + Vite + TypeScript  
 - **Testing:** Pytest  
-- **Dataset:** `data/sample_leads_500.json` (synthetic sample, 500 companies)
+- **Dataset:** `data/sample_leads.json` (synthetic sample, 500 companies)
 
 ---
 
