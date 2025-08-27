@@ -107,17 +107,34 @@ export default function App() {
             <p className="text-2xl font-bold">{hotPct}%</p>
           </div>
         </div>
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">How Scoring Works</h2>
-          <ul className="text-sm text-gray-600 dark:text-gray-300 list-disc pl-5 space-y-1">
-            <li><strong>Employee & Revenue Fit</strong> — closer to your target size/revenue → higher score</li>
-            <li><strong>ICP Match</strong> — matching industry/country/state boosts the score</li>
-            <li><strong>Contact Completeness</strong> — email, phone, LinkedIn add weight</li>
-            <li><strong>Growth Signals</strong> — hiring or growth rank adds bonus points</li>
-          </ul>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-            Scores are capped at 100. Hot ≥70, Warm 40–69, Cold &lt;40.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {/* How Scoring Works */}
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+            <h2 className="text-lg font-semibold mb-2">How Scoring Works</h2>
+            <ul className="text-sm text-gray-600 dark:text-gray-300 list-disc pl-5 space-y-1">
+              <li><strong>Employee & Revenue Fit</strong> — closer to your target size/revenue → higher score</li>
+              <li><strong>ICP Match</strong> — matching industry/country/state boosts the score</li>
+              <li><strong>Contact Completeness</strong> — email, phone, LinkedIn add weight</li>
+              <li><strong>Growth Signals</strong> — hiring or growth rank adds bonus points</li>
+            </ul>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              Scores are capped at 100. Hot ≥70, Warm 40–69, Cold &lt;40.
+            </p>
+          </div>
+
+          {/* How Filtering Works */}
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+            <h2 className="text-lg font-semibold mb-2">How Filtering Works</h2>
+            <ul className="text-sm text-gray-600 dark:text-gray-300 list-disc pl-5 space-y-1">
+              <li><strong>Industries / Countries</strong> — Only include leads in the selected industries and countries</li>
+              <li><strong>Revenue Min / Max</strong> — Only include leads whose revenue is within the chosen range</li>
+              <li><strong>Top Leads Only (≥70)</strong> — Hide Warm/Cold leads and show only Hot ones</li>
+              <li><strong>Refetch</strong> — Apply your filters and refresh the results</li>
+            </ul>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              Leave filters empty to see all leads scored without restrictions.
+            </p>
+          </div>
         </div>
 
         {/* Controls */}
