@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ScoreBadge from "./components/ScoreBadge";
-import DarkModeToggle from "./components/DarkModeToggle";
 import Stepper from "./components/Stepper";
 import IndustryChart from "./components/IndustryChart";
 import GeoChart from "./components/GeoChart";
-import type { Lead, ICPPrefs } from "./types";
+import type { Lead, ICPPrefs } from "./types/scoring";
 
 function parseCSVish(input: string): string[] {
   return input
