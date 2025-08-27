@@ -1,11 +1,30 @@
 from __future__ import annotations
 from flask import Blueprint, request, jsonify
-import json, pathlib
+import json, pathlib, sys
 from backend.scoring_config import load_weights
 from backend.scoring import score_and_label_leads
 
 bp = Blueprint("leads", __name__)
 DATA_PATH = pathlib.Path(__file__).resolve().parent / "data" / "sample_leads.json"
+def normalize_prefs(prefs: dict) -> dict:
+    """Convert frontend JSON prefs into proper Python types."""
+    industries = [s for s in prefs.get("industries", []) if s]
+    countries = [s for s in prefs.get("countries", []) if s]
+
+    def to_number(val):
+        if val in (None, "", "null", "undefined"):
+            return None
+        try:
+            return int(val)
+        except Exception:
+            return None
+
+    return {
+        "industries": industries,
+        "countries": countries,
+        "rev_min": to_number(prefs.get("rev_min")),
+        "rev_max": to_number(prefs.get("rev_max")),
+    }
 
 def _parse_json_qs(param_value: str | None):
     if not param_value:
@@ -26,7 +45,9 @@ def get_leads():
     leads = fetch_leads_somehow()
 
     # 2) Optional ICP prefs in querystring: ?prefs={"industries":["Manufacturing"],...}
-    prefs = _parse_json_qs(request.args.get("prefs"))
+    prefs = _parse_json_qs(request.args.get("prefs")) or {}
+    prefs = normalize_prefs(prefs)
+    print(f"[DEBUG] prefs={prefs}", file=sys.stderr)
     weights = load_weights()  # env/file/defaults from scoring_config.py
 
     # 3) Attach score & priority
