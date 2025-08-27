@@ -107,6 +107,18 @@ export default function App() {
             <p className="text-2xl font-bold">{hotPct}%</p>
           </div>
         </div>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 mb-6">
+          <h2 className="text-lg font-semibold mb-2">How Scoring Works</h2>
+          <ul className="text-sm text-gray-600 dark:text-gray-300 list-disc pl-5 space-y-1">
+            <li><strong>Employee & Revenue Fit</strong> — closer to your target size/revenue → higher score</li>
+            <li><strong>ICP Match</strong> — matching industry/country/state boosts the score</li>
+            <li><strong>Contact Completeness</strong> — email, phone, LinkedIn add weight</li>
+            <li><strong>Growth Signals</strong> — hiring or growth rank adds bonus points</li>
+          </ul>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Scores are capped at 100. Hot ≥70, Warm 40–69, Cold &lt;40.
+          </p>
+        </div>
 
         {/* Controls */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
