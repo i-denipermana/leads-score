@@ -44,6 +44,19 @@ It enhances the reference lead generation tool by adding an **Intelligent Lead S
 
 ## 🚀 Run Locally
 
+## 🐳 Run with Docker (Recommended)
+
+### Requirements
+- [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+
+### Build & Start
+From the repo root:
+```bash
+docker-compose build
+docker-compose up
+```
+## Run without Docker (optional)
+
 ### Backend
 ```bash
 # from repo root
