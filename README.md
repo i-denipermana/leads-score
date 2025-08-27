@@ -42,6 +42,7 @@ Example query:
 ```bash
 curl "http://143.198.127.24:5000/api/leads?sort=score_desc&min_score=70" | jq
 ```
+
 ---
 
 ## ⚙️ Tech Stack
@@ -86,8 +87,11 @@ cd frontend
 npm install
 npm run dev
 
-Open http://localhost:5173 in your browser.
+Open http://198.127.24:5173 in your browser.
 ```
+
+### Jupyter Notebook Demo 
+Open [https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing](https://https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing)
 
 ### Test
 ```bash
