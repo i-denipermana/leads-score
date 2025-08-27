@@ -31,6 +31,17 @@ It enhances the reference lead generation tool by adding an **Intelligent Lead S
   - Editable ICP preferences (industries, countries, revenue range)  
   - Hot/Warm/Cold badge with tooltip explaining factors
 
+
+
+## 🌍 Live Demo
+
+- **Frontend UI:** [http://143.198.127.24:5173](http://143.198.127.24:5173)  
+- **Backend API:** [http://143.198.127.24:5000/api/leads](http://143.198.127.24:5000/api/leads)
+
+Example query:
+```bash
+curl "http://143.198.127.24:5000/api/leads?sort=score_desc&min_score=70" | jq
+```
 ---
 
 ## ⚙️ Tech Stack
