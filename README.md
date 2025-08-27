@@ -88,7 +88,7 @@ npm install
 npm run dev
 ```
 
-Open [http://198.127.24](http://198.127.24) in your browser.
+Open [http://143.198.127.24](http://143.198.127.24/) in your browser.
 
 ### Jupyter Notebook Demo 
 Open [https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing](https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing)
