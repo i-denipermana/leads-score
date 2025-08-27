@@ -1,27 +1,29 @@
-type Props = { score: number | undefined };
+// src/components/ScoreBadge.tsx
+import { Flame, Sun, Snowflake } from "lucide-react";
 
-export default function ScoreBadge({ score }: Props) {
-  const s = score ?? 0;
-  const label = s >= 70 ? "Hot" : s >= 40 ? "Warm" : "Cold";
-  const style: React.CSSProperties =
-    s >= 70
-      ? { background: "#e6f4ea", color: "#137333" }
-      : s >= 40
-      ? { background: "#fff8e1", color: "#8a6d1a" }
-      : { background: "#eceff1", color: "#37474f" };
+type Props = { score?: number };
+
+export default function ScoreBadge({ score = 0 }: Props) {
+  let label = "Cold";
+  let classes = "bg-gray-200 text-gray-700";
+  let icon = <Snowflake size={14} />;
+
+  if (score >= 70) {
+    label = "Hot";
+    classes = "bg-green-100 text-green-700";
+    icon = <Flame size={14} />;
+  } else if (score >= 40) {
+    label = "Warm";
+    classes = "bg-amber-100 text-amber-700";
+    icon = <Sun size={14} />;
+  }
 
   return (
     <span
-      style={{
-        ...style,
-        borderRadius: 999,
-        padding: "2px 8px",
-        fontSize: 12,
-        whiteSpace: "nowrap",
-      }}
-      title="Score blends size/revenue fit, ICP match, contact completeness, and growth."
+      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${classes}`}
+      title={`Score: ${score}`}
     >
-      {label} · {s}
+      {icon} {label} · {score}
     </span>
   );
 }

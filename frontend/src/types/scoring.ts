@@ -6,6 +6,24 @@ export type ICPPrefs = {
   rev_max?: number;
 };
 
+export type Lead = {
+  id: string;
+  name: string;
+  industry?: string;
+  country?: string;
+  state?: string;
+  employee_count?: number;
+  revenue_usd?: number;
+  email?: string | null;
+  phone?: string | null;
+  linkedin?: string | null;
+  growjo_rank?: number | null;
+  hiring?: boolean | null;
+  score?: number;
+  priority?: "Hot" | "Warm" | "Cold";
+};
+
+
 export type ScoreWeights = {
   employee_min: number;
   employee_max: number;
