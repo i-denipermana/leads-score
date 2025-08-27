@@ -91,7 +91,7 @@ Open http://198.127.24:5173 in your browser.
 ```
 
 ### Jupyter Notebook Demo 
-Open [https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing](https://https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing)
+Open [https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing](https://colab.research.google.com/drive/1OgYRVG5voT_2PdzPjdj4P9wliyWh04s1?usp=sharing)
 
 ### Test
 ```bash
